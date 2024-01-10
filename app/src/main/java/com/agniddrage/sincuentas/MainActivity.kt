@@ -12,7 +12,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 
 private const val TAG = "MainActivity"
-private const val INITIAL_TIP_PERCENT = 15
+private const val INITIAL_TIP_PERCENT = 10
 class MainActivity : AppCompatActivity() {
     private lateinit var etBaseAmount: EditText
     private lateinit var seekBarTip: SeekBar
