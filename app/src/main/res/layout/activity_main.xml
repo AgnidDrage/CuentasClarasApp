@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <!-- Views on the left side -->
+    <TextView
+        android:id="@+id/tvTipPercentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvTipLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvBaseLabel"
+        tools:text="24%" />
+
+    <TextView
+        android:id="@+id/tvTotalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Total:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvTipLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvTipLabel" />
+
+    <TextView
+        android:id="@+id/tvBaseLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:text="Costo:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Views on the right side -->
+    <TextView
+        android:id="@+id/tvTipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Propina:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvAmountDivision"
+        app:layout_constraintTop_toBottomOf="@+id/tvAmountDivision" />
+
+    <EditText
+        android:id="@+id/etBaseAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:ems="8"
+        android:gravity="center"
+        android:hint="Introduzca precio"
+        android:inputType="numberDecimal"
+        android:maxLength="6"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvBaseLabel"
+        app:layout_constraintStart_toEndOf="@+id/tvBaseLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvBaseLabel" />
+
+    <SeekBar
+        android:id="@+id/seekBarTip"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:max="30"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTipPercentLabel"
+        app:layout_constraintEnd_toEndOf="@+id/etBaseAmount"
+        app:layout_constraintStart_toStartOf="@+id/etBaseAmount"
+        app:layout_constraintTop_toTopOf="@+id/tvTipPercentLabel" />
+
+    <TextView
+        android:id="@+id/tvTipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTipLabel"
+        app:layout_constraintEnd_toEndOf="@+id/etAmountDivision"
+        app:layout_constraintStart_toStartOf="@+id/etAmountDivision"
+        app:layout_constraintTop_toTopOf="@+id/tvTipLabel"
+        tools:text="19.96" />
+
+    <TextView
+        android:id="@+id/tvTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTotalLabel"
+        app:layout_constraintEnd_toEndOf="@+id/tvTipAmount"
+        app:layout_constraintStart_toStartOf="@+id/tvTipAmount"
+        app:layout_constraintTop_toTopOf="@+id/tvTotalLabel"
+        tools:text="103.11" />
+
+    <TextView
+        android:id="@+id/tvFooter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="Hecho con ❤ por AgnidDrage"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTipDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/seekBarTip"
+        app:layout_constraintStart_toStartOf="@+id/seekBarTip"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarTip"
+        tools:text="Aceptable" />
+
+    <EditText
+        android:id="@+id/etAmountDivision"
+        android:layout_width="56dp"
+        android:layout_height="48dp"
+        android:digits="0123456789"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="4"
+        android:inputType="number"
+        android:maxLength="3"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAmountDivision"
+        app:layout_constraintEnd_toEndOf="@+id/etBaseAmount"
+        app:layout_constraintStart_toStartOf="@+id/etBaseAmount"
+        app:layout_constraintTop_toTopOf="@+id/tvAmountDivision" />
+
+    <TextView
+        android:id="@+id/tvAmountDivision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
+        android:text="Dividido entre: "
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvBaseLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvTipPercentLabel" />
+
+    <TextView
+        android:id="@+id/tvToPayLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="A pagar C/U:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvTotalLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalLabel" />
+
+    <TextView
+        android:id="@+id/tvToPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/tvToPayLabel"
+        app:layout_constraintEnd_toEndOf="@+id/tvTotalAmount"
+        app:layout_constraintStart_toStartOf="@+id/tvTotalAmount"
+        app:layout_constraintTop_toTopOf="@+id/tvToPayLabel"
+        tools:text="152000" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
