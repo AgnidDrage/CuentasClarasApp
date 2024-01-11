@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.agniddrage.sincuentas"
+    namespace = "com.agniddrage.cuentasclaras"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.agniddrage.sincuentas"
+        applicationId = "com.agniddrage.cuentasclaras"
         minSdk = 21
         targetSdk = 34
         versionCode = 1

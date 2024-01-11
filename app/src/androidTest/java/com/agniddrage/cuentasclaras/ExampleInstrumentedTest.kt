@@ -1,4 +1,4 @@
-package com.agniddrage.sincuentas
+package com.agniddrage.cuentasclaras
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

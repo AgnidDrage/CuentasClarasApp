@@ -1,4 +1,4 @@
-package com.agniddrage.sincuentas
+package com.agniddrage.cuentasclaras
 
 import org.junit.Test
 

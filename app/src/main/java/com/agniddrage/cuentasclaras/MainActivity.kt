@@ -1,4 +1,4 @@
-package com.agniddrage.sincuentas
+package com.agniddrage.cuentasclaras
 
 import android.animation.ArgbEvaluator
 import androidx.appcompat.app.AppCompatActivity
